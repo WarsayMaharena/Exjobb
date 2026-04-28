@@ -1,0 +1,4 @@
+def dist2(x, y):
+    # x, y are integer vectors (numpy arrays)
+    d = x - y
+    return np.sum(d * d)

@@ -1,0 +1,9 @@
+module {
+  func.func @dist2(%arg0: tensor<128x!FHE.esint<10>>, %arg1: tensor<128x!FHE.esint<10>>) -> !FHE.eint<21> {
+    %0 = "FHELinalg.sub_eint"(%arg0, %arg1) : (tensor<128x!FHE.esint<10>>, tensor<128x!FHE.esint<10>>) -> tensor<128x!FHE.esint<10>>
+    %1 = "FHELinalg.mul_eint"(%0, %0) : (tensor<128x!FHE.esint<10>>, tensor<128x!FHE.esint<10>>) -> tensor<128x!FHE.esint<21>>
+    %2 = "FHELinalg.to_unsigned"(%1) : (tensor<128x!FHE.esint<21>>) -> tensor<128x!FHE.eint<21>>
+    %3 = "FHELinalg.sum"(%2) {axes = [], keep_dims = false} : (tensor<128x!FHE.eint<21>>) -> !FHE.eint<21>
+    return %3 : !FHE.eint<21>
+  }
+}

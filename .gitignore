@@ -1,0 +1,4 @@
+librdkafka/
+venv_deepface/
+venv_fhe/
+.ckksvenv/

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/joelmah/Ai-detection-model/EXjobb/AI-Detection-Model/venv_fhe/lib/python3.10/site-packages/concrete/fhe/compilation/module_compiler.py", line 438, in compile
+    output = FheModule(
+  File "/home/joelmah/Ai-detection-model/EXjobb/AI-Detection-Model/venv_fhe/lib/python3.10/site-packages/concrete/fhe/compilation/module.py", line 766, in __init__
+    self.execution_runtime.init()
+  File "/home/joelmah/Ai-detection-model/EXjobb/AI-Detection-Model/venv_fhe/lib/python3.10/site-packages/concrete/fhe/compilation/utils.py", line 46, in init
+    self._val = self._init()
+  File "/home/joelmah/Ai-detection-model/EXjobb/AI-Detection-Model/venv_fhe/lib/python3.10/site-packages/concrete/fhe/compilation/module.py", line 744, in init_execution
+    execution_server = Server.create(
+  File "/home/joelmah/Ai-detection-model/EXjobb/AI-Detection-Model/venv_fhe/lib/python3.10/site-packages/concrete/fhe/compilation/server.py", line 222, in create
+    library = compiler.compile(
+RuntimeError: NoParametersFound

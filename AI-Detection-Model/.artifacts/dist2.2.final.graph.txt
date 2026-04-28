@@ -1,0 +1,6 @@
+%0 = x                       # EncryptedTensor<int8, shape=(128,)>          ∈ [-127, 127]
+%1 = y                       # EncryptedTensor<int8, shape=(128,)>          ∈ [-127, 127]
+%2 = subtract(%0, %1)        # EncryptedTensor<int9, shape=(128,)>          ∈ [-248, 254]
+%3 = multiply(%2, %2)        # EncryptedTensor<uint16, shape=(128,)>        ∈ [0, 64516]
+%4 = sum(%3)                 # EncryptedScalar<uint21>                      ∈ [1008101, 1940969]
+return %4
